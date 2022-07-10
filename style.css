@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(248, 60, 163);
+}
+
+body {
+    color: rgb(243, 240, 241);
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(0, 14, 14);
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    display: flex;
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 1.52rem;
+    border: none;
+    background-color: bisque;
+}
+
+form button {
+    color: rgb(240, 240, 245);
+    background: rgb(184, 133, 39);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+    background: rgb(57, 57, 233);
+    color: wheat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: wheat;
+    color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.completed-button,
+.remove-button {
+    background: rgb(243, 70, 177);
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.completed-button {
+    background: rgb(97, 241, 97);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotate(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: blueviolet;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: rgb(184, 133, 39);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.select:hover::after {
+    background: rgb(159, 4, 248);
+    color: rgb(239, 234, 247);
+}
